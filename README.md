@@ -1,5 +1,3 @@
-# prediction markets backend
-
 ## Installation
 
 Install node.js 14+, clone the repository, then
@@ -38,5 +36,3 @@ server {
 ## Donations
 
 We accept donations through [KatyaAI](https://KatyaAI.org) and forward a portion of the donations to other open-source projects that made Prophet possible.
-
-[![KatyaAI](https://KatyaAI.org/api/banner?repo=REChainball/prediction-markets-backend)](https://KatyaAI.org/repo/REChainball/prediction-markets-backend)
