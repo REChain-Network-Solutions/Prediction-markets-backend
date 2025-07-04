@@ -1,38 +1,57 @@
-## Installation
+# 🎯 REChain Prediction Markets Backend
 
-Install node.js 14+, clone the repository, then
+This is the backend core of the **REChain Prediction Markets** platform — a decentralized infrastructure for event-based markets. It supports the creation, trading, resolution, and payout of predictions on real-world and on-chain outcomes.
 
-`npm install`
+## 🔍 Features
 
-By default the API is accessible at `http://localhost:5000` (`http://localhost:5001` for testnet). You may want to setup a reverse proxy like Nginx to make it accessible on a public url.
+- Market creation and trading engine
+- Oracle-based event resolution
+- Modular support for multiple event types
+- Secure, decentralized backend logic
+- Designed for integration with REChain frontend & DAO
 
-## Warning
+## 📁 Project Structure
 
-Frontend and backend must be in the same directory and keep original folder names
-
-## Run
-`npm run load-emblems` (once upon first launch)
-`npm run start`
-
-## Nginx
-```text
-server {
-	listen 80;
-	server_name localhost;
-
-	location / {
-		proxy_http_version 1.1;
-		proxy_set_header Upgrade $http_upgrade;
-		proxy_set_header Connection "upgrade";
-		proxy_pass http://127.0.0.1:4200;
-	}
-
-	location ~ \.(js|ico|svg|css|png|jpeg|json) {
-		root /path/to/build;
-	}
-}
+```
+Prediction-markets-backend/
+├── src/                   # Backend services
+├── contracts/             # Smart contracts for prediction logic
+├── scripts/               # Deployment and automation scripts
+├── tests/                 # Unit and integration tests
+├── docs/                  # Documentation
+└── README.md
 ```
 
-## Donations
+## 🚀 Getting Started
 
-We accept donations through [KatyaAI](https://KatyaAI.org) and forward a portion of the donations to other open-source projects that made Prophet possible.
+```bash
+git clone https://github.com/REChain-Network-Solutions/Prediction-markets-backend.git
+cd Prediction-markets-backend
+npm install
+```
+
+## 🧪 Running the Backend
+
+Use environment variables to configure the backend:
+
+```env
+PORT=3000
+DATABASE_URL=mongodb://localhost:27017/prediction
+PRIVATE_KEY=your_private_key
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## 🧪 Testing
+
+```bash
+npm test
+```
+
+## 📄 License
+
+MIT © REChain Network Solutions
